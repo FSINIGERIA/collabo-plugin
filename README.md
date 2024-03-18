@@ -28,9 +28,20 @@ Please feel free to fork this package and contribute by submitting a pull reques
 
 The current features have been implemented
 
+Flutterwave
+
 - Payment
 - Transfers
 - OTP
+- Bank
+
+Parkway
+
+- Wallets
+- Bank
+- Disputes
+
+
 
 
 > If there are features you need urgently, I will be willing to prioritize them, please reach out to fsi on info@fsi.ng
