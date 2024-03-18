@@ -57,7 +57,7 @@ class CollaboRequest {
             return $this->authorizationToken;
         }
 
-        $newToken = $this->fluter_get_authorization();
+        $newToken = $this->collabo_get_authorization();
 
         if (!$newToken || !isset($newToken['Authorization']) || !isset($newToken['max-age'])) {
             return null;
@@ -70,7 +70,7 @@ class CollaboRequest {
             'max-age' => $newToken['max-age']
         ];
 
-        // Cache the new token with an expiration time provided by fluter_get_authorization
+        // Cache the new token with an expiration time provided by collabo_get_authorization
         Cache::put('authorization_token', $cachedData);
 
         return $this->authorizationToken;
@@ -83,8 +83,8 @@ class CollaboRequest {
         return $expiresInMinutes <= 0 || now() > now()->addMinutes($expiresInMinutes);
     }
 
-    private function fluter_get_authorization() {
-        $url = config('collabo.baseurl');
+    private function collabo_get_authorization() {
+        $url = config('collabo.authorization_url');
 
         $data = [
             "ux" => config('collabo.ux'),

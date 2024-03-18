@@ -13,13 +13,13 @@ class Payments
 
     public function __construct(){
         $this->collabo = new CollaboRequest();
-        $this->baseurl = config('collabo.flutter_baseurl');
+        $this->baseurl = config('collabo.base_url');
 
     }
 
     public function initiate($data){
         
-        $url = $this->baseurl."/payments/intiate-payment";
+        $url = $this->baseurl."/flutterwave/payments/intiate-payment";
 
         $response = $this->collabo->sendPostRequest($url, $data);
 
@@ -30,7 +30,7 @@ class Payments
 
     public function initiateRefund($data){
 
-        $url = $this->baseurl."/payments/transaction-refund";
+        $url = $this->baseurl."/flutterwave/payments/transaction-refund";
 
         $response = $this->collabo->sendPostRequest($url, $data);
 
@@ -41,7 +41,7 @@ class Payments
 
     public function verify($data){
 
-        $url = $this->baseurl."/payments/verify-transaction-by-ref";
+        $url = $this->baseurl."/flutterwave/payments/verify-transaction-by-ref";
 
         $response = $this->collabo->sendPostRequest($url, $data);
 

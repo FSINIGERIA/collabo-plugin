@@ -1,11 +1,13 @@
 <?php
-namespace Fsi\Collabo\Helpers\Flutterwave;
+namespace Fsi\Collabo\Controllers;
 
 use Illuminate\Http\Request;
-use fsi\collabo\src\Helpers\CollaboRequest;
+use fsi\collabo\src\Helper\Collabo;
+use Fsi\Collabo\Helpers\CollaboRequest;
 
 
-class Otp
+
+class Dispute
 {
     protected $collabo;
     protected $baseurl;
@@ -16,23 +18,23 @@ class Otp
 
     }
 
-    public function generate($data){
+   public function logDispute($data){
+        $url = $this->baseurl."/parkway/disputes/log-dispute";
 
-        $url = $this->baseurl."/flutterwave/otp/generate-otp";
         $response = $this->collabo->sendPostRequest($url, $data);
 
         if(isset($response->errorDesc)) return $this->collabo->errorResponse($response->errorDesc, $response->hasHeader('status') ? $response->headers->get('status') : 400);
 
         return $this->collabo->successResponse($response, 200);
-    }
+   }
 
-    public function verify($data){
+   public function getLoggedDispute($data){
+        $url = $this->baseurl."/parkway/disputes/log-dispute";
 
-        $url = $this->baseurl."/flutterwave/otp/verify-otp";
         $response = $this->collabo->sendPostRequest($url, $data);
 
         if(isset($response->errorDesc)) return $this->collabo->errorResponse($response->errorDesc, $response->hasHeader('status') ? $response->headers->get('status') : 400);
 
         return $this->collabo->successResponse($response, 200);
-    }
+   }
 }

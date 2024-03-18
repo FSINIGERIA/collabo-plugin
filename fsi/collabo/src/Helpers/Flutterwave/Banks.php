@@ -11,13 +11,13 @@ class Banks
 
     public function __construct(){
         $this->collabo = new CollaboRequest();
-        $this->baseurl = config('collabo.flutter_baseurl');
+        $this->baseurl = config('collabo.base_url');
 
     }
 
     public function lookupBanks(){
         
-        $url = $this->baseurl."/banks/banks-list/NG";
+        $url = $this->baseurl."/flutterwave/banks/banks-list/NG";
 
         $response = $this->collabo->sendPostRequest($url, []);
 

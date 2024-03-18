@@ -12,13 +12,13 @@ class Transfers
 
     public function __construct(){
         $this->collabo = new CollaboRequest();
-        $this->baseurl = config('collabo.flutter_baseurl');
+        $this->baseurl = config('collabo.base_url');
 
     }
 
     public function create($data){
 
-        $url = $this->baseurl."/transfers/create-transfer";
+        $url = $this->baseurl."/flutterwave/transfers/create-transfer";
 
         $response = $this->collabo->sendPostRequest($url, $data);
 
@@ -29,7 +29,7 @@ class Transfers
 
     public function fee($data){
 
-        $url = $this->baseurl."/transfers/transfer-fee";
+        $url = $this->baseurl."/flutterwave/transfers/transfer-fee";
 
         $response = $this->collabo->sendPostRequest($url, $data);
 
@@ -41,7 +41,7 @@ class Transfers
 
     public function retry($retryid){
 
-        $url = $this->baseurl."/transfers/retry-transfer/".$retryid;
+        $url = $this->baseurl."/flutterwave/transfers/retry-transfer/".$retryid;
 
         $response = $this->collabo->sendPostRequest();
 
@@ -53,7 +53,7 @@ class Transfers
 
     public function lookupByStatus($data){
        
-        $url = $this->baseurl."/transfers/all-transfers";
+        $url = $this->baseurl."/flutterwave/transfers/all-transfers";
 
         $response = $this->collabo->sendPostRequest($url, $data);
 
@@ -64,7 +64,7 @@ class Transfers
 
     public function getTransactionById($id){
        
-        $url = $this->baseurl."/transfers/get-transfer-by-id/transid?id=".$id;
+        $url = $this->baseurl."/flutterwave/transfers/get-transfer-by-id/transid?id=".$id;
 
         $response = $this->collabo->sendGetRequest($url);
 
@@ -75,7 +75,7 @@ class Transfers
 
     public function bulkTransfer($data){
        
-        $url = $this->baseurl."/transfers/bulk-transfer";
+        $url = $this->baseurl."/flutterwave/transfers/bulk-transfer";
 
         $response = $this->collabo->sendPostRequest($url, $data);
 
@@ -86,7 +86,7 @@ class Transfers
 
     public function lookupRetryTransferById($id){
        
-        $url = $this->baseurl."/transfers/fetch-retry-by-id/".$id;
+        $url = $this->baseurl."/flutterwave/transfers/fetch-retry-by-id/".$id;
 
         $response = $this->collabo->sendPostRequest($url, []);
 
