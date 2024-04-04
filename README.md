@@ -7,7 +7,7 @@
 
 > Implement FSI Collabo plugin gateway easily with Laravel
 
-- Go to [https://fsi.ng/](https://dashboard.flutterwave.com/dashboard/settings/apis) to get your ux, iv and key
+- Go to [https://fsi.ng/] to get your ux, iv and key
 
 
 ## Documentation
