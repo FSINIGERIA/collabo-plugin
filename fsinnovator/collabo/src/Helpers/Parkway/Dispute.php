@@ -1,9 +1,9 @@
 <?php
-namespace Fsi\Collabo\Controllers;
+namespace Fsinnovator\Collabo\Controllers;
 
 use Illuminate\Http\Request;
 use fsi\collabo\src\Helper\Collabo;
-use Fsi\Collabo\Helpers\CollaboRequest;
+use Fsinnovator\Collabo\Helpers\CollaboRequest;
 
 
 

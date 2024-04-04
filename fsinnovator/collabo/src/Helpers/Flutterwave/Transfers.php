@@ -1,5 +1,5 @@
 <?php
-namespace Fsi\Collabo\Helpers\Flutterwave;
+namespace Fsinnovator\Collabo\Helpers\Flutterwave;
 
 use Illuminate\Http\Request;
 use fsi\collabo\src\Helpers\CollaboRequest;

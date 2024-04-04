@@ -1,6 +1,6 @@
 <?php
-// packages/fsi/collabo/src/Facades/CollaboFacade.php
-namespace Fsi\Collabo\Facades;
+
+namespace Fsinnovator\Collabo\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

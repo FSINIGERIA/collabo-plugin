@@ -1,5 +1,5 @@
 {
-    "name": "fsi/collabo",
+    "name": "fsinnovator/collabo",
     "description": "This package provides services for integrating collabo API's into your application. The sdk was built for easy access of the providers under FSI to be easily integrated into your development codebase",
     "type": "library",
     "license": "MIT",
@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Fsi\\Collabo\\": "src/"
+            "Fsinnovator\\Collabo\\": "src/"
         }
     },
     "require": {
@@ -20,10 +20,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Fsi\\Collabo\\CollaboServiceProvider"
+                "Fsinnovator\\Collabo\\CollaboServiceProvider"
             ],
             "aliases": {
-                "Collabo": "Fsi\\Collabo\\Facades\\CollaboFacade"
+                "Collabo": "Fsinnovator\\Collabo\\Facades\\CollaboFacade"
             }
         }
     }

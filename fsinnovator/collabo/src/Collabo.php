@@ -1,6 +1,6 @@
 <?php
 
-namespace Fsi\Collabo;
+namespace Fsinnovator\Collabo;
 
 use Illuminate\Support\Facades\Http;
 use Unirest\Request\Body;
@@ -9,15 +9,15 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Config;
 
 // flutterwave
-use Fsi\Collabo\Helpers\Flutterwave\Banks;
-use Fsi\Collabo\Helpers\Flutterwave\Otp;
-use Fsi\Collabo\Helpers\Flutterwave\Payments;
-use Fsi\Collabo\Helpers\Flutterwave\Transfers;
+use Fsinnovator\Collabo\Helpers\Flutterwave\Banks;
+use Fsinnovator\Collabo\Helpers\Flutterwave\Otp;
+use Fsinnovator\Collabo\Helpers\Flutterwave\Payments;
+use Fsinnovator\Collabo\Helpers\Flutterwave\Transfers;
 
 // parkway
-use Fsi\Collabo\Helpers\Parkway\Banks as ParkwayBank;
-use Fsi\Collabo\Helpers\Parkway\Dispute;
-use Fsi\Collabo\Helpers\Parkway\Wallet;
+use Fsinnovator\Collabo\Helpers\Parkway\Banks as ParkwayBank;
+use Fsinnovator\Collabo\Helpers\Parkway\Dispute;
+use Fsinnovator\Collabo\Helpers\Parkway\Wallet;
 
 
 class Collabo {

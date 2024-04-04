@@ -1,6 +1,6 @@
 <?php
 
-namespace Fsi\Collabo\Helpers;
+namespace Fsinnovator\Collabo\Helpers;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;

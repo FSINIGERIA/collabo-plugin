@@ -1,8 +1,8 @@
 <?php
-namespace Fsi\Collabo\Helpers\Flutterwave;
+namespace Fsinnovator\Collabo\Helpers\Flutterwave;
 
 use Illuminate\Http\Request;
-use Fsi\Collabo\Helpers\CollaboRequest;
+use Fsinnovator\Collabo\Helpers\CollaboRequest;
 
 class Banks
 {

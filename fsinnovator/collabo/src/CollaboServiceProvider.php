@@ -1,9 +1,9 @@
 <?php
 
-namespace Fsi\Collabo;
+namespace Fsinnovator\Collabo;
 
 use Illuminate\Support\ServiceProvider;
-use Fsi\Collabo\Facades\CollaboFacade;
+use Fsinnovator\Collabo\Facades\CollaboFacade;
 
 class CollaboServiceProvider extends ServiceProvider
 {
